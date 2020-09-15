@@ -32,10 +32,10 @@ public void beforeClass() throws InterruptedException
 @Test(priority=0)
 public void demoBlazeSignUp() throws InterruptedException
 {
-	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 	driver.findElement(By.linkText("Sign up")).click();
-
-	driver.findElement(By.xpath("//input[@id='sign-username']")).sendKeys("Padmapriya");
+Thread.sleep(1000);
+	driver.findElement(By.xpath("//input[@id='sign-username']")).sendKeys("PadmapriyaInb");
 	driver.findElement(By.id("sign-password")).sendKeys("123");
 	
 	driver.findElement(By.xpath("//button[contains(text(),'Sign up')]")).click();
@@ -49,7 +49,7 @@ public void demoBlazeSignUp() throws InterruptedException
 @Test(priority=1)
 public void demoBlazeLogIn() throws InterruptedException
 {
-	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 	driver.findElement(By.linkText("Log in")).click();
 	
 	driver.findElement(By.id("loginusername")).sendKeys("Padmapriya");
@@ -62,7 +62,7 @@ public void demoBlazeLogIn() throws InterruptedException
 @Test(priority=2)
 public void demoBlazeContact() throws InterruptedException
 {
-	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
     Thread.sleep(3000);
     driver.findElement(By.linkText("Contact")).click();
   	driver.findElement(By.id("recipient-email")).sendKeys("xyz@gmail.com");
@@ -79,7 +79,7 @@ public void demoBlazeContact() throws InterruptedException
 	@Test(priority=3)
 	public void demoBlazeAddToCart() throws InterruptedException
 	{
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 		driver.findElement(By.linkText("Samsung galaxy s7")).click();
 		
 		driver.findElement(By.linkText("Add to cart")).click();
@@ -94,8 +94,7 @@ public void demoBlazeContact() throws InterruptedException
 	{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.linkText("Cart")).click();
-	//	driver.findElement((By.xpath("//table[contains(text(),'Samsung')]")));
-		//if(assert.assertEquals(Iphone 6 32gb, expected);)
+	
 }
 	@AfterTest
 	public void afterTest() 

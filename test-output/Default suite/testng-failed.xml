@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.atmecs.selenium.DemoBlaze">
+      <class name="com.atmecs.selenium.DemoAutomation">
         <methods>
+          <include name="register"/>
           <include name="beforeClass"/>
-          <include name="demoBlazeAddToCart"/>
-          <include name="demoBlazeVerifyCart"/>
-          <include name="afterTest"/>
           <include name="beforeTest"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- com.atmecs.selenium.DemoBlaze -->
+      </class> <!-- com.atmecs.selenium.DemoAutomation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
