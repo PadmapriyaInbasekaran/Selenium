@@ -17,7 +17,8 @@ public class WindowHandles {
 	public void beforeTest() throws InterruptedException
 	{
 		System.out.println("TEST EXECUTION BEGINS...");
-		System.setProperty("webdriver.chrome.driver",  "C:\\Users\\padmapriya.i\\Downloads\\chromedriver.exe");
+		String chromeDriverPath = System.setProperty("user.dir",  "\\chromedriver.exe");
+		System.out.println(chromeDriverPath);
 		driver=new ChromeDriver();
 	}
 	@BeforeClass
@@ -190,6 +191,6 @@ public class WindowHandles {
 	{
 
 		System.out.println("TEST EXECUTION ENDS...");
-		//driver.close();
+		driver.close();
 	}	
 }

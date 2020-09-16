@@ -26,7 +26,8 @@ public class Goibibo {
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException
 	{
-		System.setProperty("webdriver.chrome.driver",  "C:\\Users\\padmapriya.i\\Downloads\\chromedriver.exe");
+		String chromeDriverPath = System.setProperty("user.dir",  "\\chromedriver.exe");
+		System.out.println(chromeDriverPath);
 		driver=new ChromeDriver();
 		driver.navigate().to("https://www.goibibo.com/flights/");   
 		driver.manage().window().maximize();
