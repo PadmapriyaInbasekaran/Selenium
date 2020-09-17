@@ -40,17 +40,22 @@ public class DemoAutomation {
 		driver.findElement(By.xpath("//*[@ng-model='LastName']")).sendKeys("Inbasekaran"); //lastName
 		driver.findElement(By.xpath("//*[@ng-model='Adress']")).sendKeys("Chennai,Tamilnadu");  //address
 		driver.findElement(By.xpath("//*[@ng-model='EmailAdress']")).sendKeys("abcd@gmail.com"); //email
+
 		driver.findElement(By.xpath("//*[@ng-model='Phone']")).sendKeys("9234567747");  //mobileNo
 		driver.findElement(By.xpath("//*[@value='FeMale']")).click();  //gender
 		driver.findElement(By.xpath("//*[@id='checkbox2']")).click();  //hobby
+		Thread.sleep(2000);
+
+		WebElement element8 =	driver.findElement(By.xpath("//*[@id='msdd']"));  
+		element8.click();
 		Thread.sleep(1000);
-		//		WebElement txt9 =	driver.findElement(By.xpath("//*[@id='msdd']"));  
-		//		//Thread.sleep(1000);
-		//		txt9.click();
-		//		Thread.sleep(1000);
-		//		WebElement txt10 =	driver.findElement(By.linkText("Danish"));
-		//		Thread.sleep(1000);
-		//		txt10.sendKeys(Keys.ENTER); 
+		WebElement element9 =	driver.findElement(By.xpath("//a[contains(text(),'Danish')]"));
+		element9.click();
+		Thread.sleep(1000);
+		WebElement element10 =	driver.findElement(By.xpath("//a[contains(text(),'French')]"));
+		element10.click();
+		driver.findElement(By.xpath("//form[@id='basicBootstrapForm']")).click();
+		Thread.sleep(10000);
 
 		WebElement element1 =	driver.findElement(By.xpath("//*[@id='Skills']"));  
 		element1.click();
@@ -63,13 +68,12 @@ public class DemoAutomation {
 		element2.sendKeys(Keys.ENTER);        //country
 		Thread.sleep(3000);
 
-		//		WebElement txt8 = driver.findElement (By.xpath("//*[@id=\'basicBootstrapForm\']/div[10]/div/span/span[1]/span"));
-		//		txt8.click();
-		//		Thread.sleep(3000);
-		//		txt8.sendKeys("Den");
-		//		txt8.sendKeys(Keys.DOWN);
-		//		txt8.sendKeys(Keys.ENTER);
-		//		Thread.sleep(3000);
+		WebElement txt8 = driver.findElement (By.xpath("//*[@id=\'basicBootstrapForm\']/div[10]/div/span/span[1]/span"));
+		txt8.click();
+		Thread.sleep(3000);
+		txt8.sendKeys(Keys.DOWN);
+		txt8.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
 
 		WebElement element3 = driver.findElement(By.id("yearbox"));
 		element3.click();
@@ -108,7 +112,7 @@ public class DemoAutomation {
 		element7.sendKeys("Welcome@123");
 		driver.findElement(By.id("submitbtn")).click();
 		Thread.sleep(10000);
-		
+
 	}
 	@AfterTest
 	public void afterTest() 

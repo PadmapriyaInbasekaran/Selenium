@@ -1,10 +1,10 @@
 package com.atmecs.selenium;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -30,29 +30,27 @@ public class ixigo {
 	@Test 
 	public void booking() throws InterruptedException
 	{
-		driver.findElement(By.xpath("//*[@id=\'content\']/div/div[1]/div[6]/div/nav/span[2]/span")).click();
-		WebElement field1 =	driver.findElement(By.xpath("//*[@id=\'content\']/div/div[1]/div[6]/div/div/div[1]/div/div[1]/input"));
-		field1.click();
-		field1.sendKeys("che");
 		Thread.sleep(2000);
-		field1.sendKeys(Keys.ENTER);
-		
-		WebElement field2 =	driver.findElement(By.xpath("//*[@id=\'content\']/div/div[1]/div[6]/div/div/div[3]/div/div[1]/input"));
-		field2.click();
-		field2.sendKeys("ben");
+		WebElement element1 = driver.findElement(By.xpath("(//input[@placeholder='Enter city or airport'])[1]"));
+		element1.click();
 		Thread.sleep(2000);
-		field2.sendKeys(Keys.ENTER);
-		
+		element1.sendKeys("Che");
+		element1.sendKeys(Keys.ENTER);
+		driver.findElement(By.xpath("(//input[@placeholder='Enter city or airport'])[2]")).sendKeys("Bom");
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\'content\']/div/div[1]/div[6]/div/div/div[4]/div/div[1]/div/input")).click();
-		driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[1]/table/tbody/tr[3]/td[4]/div[1]")).click();
-		
+		driver.findElement(By.xpath("//input[@placeholder='Depart']")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\'content\']/div/div[1]/div[6]/div/div/div[4]/div/div[2]/div[2]/input")).click();
-		driver.findElement(By.xpath("/html/body/div[6]/div[2]/div[1]/table/tbody/tr[3]/td[7]/div[1]")).click();
-		
+		driver.findElement(By.xpath("//td[@data-date='19092020']")).click();
+		driver.findElement(By.xpath("//input[@placeholder='Return']")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@id=\'content\']/div/div[1]/div[6]/div/div/div[5]/div/div[1]/input")).click();
-		driver.findElement(By.xpath("//*[@id=\'content\']/div/div[1]/div[6]/div/div/div[5]/div/div[2]/div[2]/div[1]/div[2]/span[5]")).click();
+		driver.findElement(By.xpath("//td[@data-date='22092020']")).click();
+		driver.findElement(By.xpath("(//div[@class='u-ripple'])[1]")).click();
+	}
+	@AfterTest
+	public void afterTest() 
+	{
+
+		System.out.println("TEST EXECUTION ENDS...");
+		driver.close();
 	}
 }
