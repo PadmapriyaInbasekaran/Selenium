@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+//import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,6 +23,7 @@ import org.testng.annotations.Test;
 public class Goibibo {
 	WebDriver driver;
 	Properties prop ;
+	Properties prop1 ;
 	@BeforeTest
 	public void beforeTest() throws InterruptedException, IOException
 	{
@@ -29,6 +31,10 @@ public class Goibibo {
 		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\atmecs\\selenium\\locators.properties");
 		prop = new Properties();
 		prop.load(file);
+		
+		FileInputStream file1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\atmecs\\selenium\\data.properties");
+		prop1 = new Properties();
+		prop1.load(file1);
 	}
 	@BeforeMethod
 	public void beforeMethod() throws InterruptedException
@@ -40,7 +46,7 @@ public class Goibibo {
 		driver.manage().window().maximize();
 
 	}
-	@Test(priority=0)
+	@Test(priority=1)
 	public void signup() throws InterruptedException
 	{
 		driver.findElement(By.linkText("Sign up")).click();
@@ -70,14 +76,14 @@ public class Goibibo {
 		}
 
 	}
-	@Test (priority=1)
+	@Test (priority=0)
 	public void booking() throws InterruptedException
 	{
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
 		driver.findElement(By.id((prop.getProperty("RoundTrip_id")))).click();
 		WebElement field1 =	driver.findElement(By.id(prop.getProperty("From_id")));
 		field1.click();
-		field1.sendKeys("che");
+		field1.sendKeys(prop1.getProperty("From"));
 		Thread.sleep(2000);
 		field1.sendKeys(Keys.ARROW_DOWN);
 		Thread.sleep(2000);
@@ -85,14 +91,15 @@ public class Goibibo {
 
 		WebElement field2 =	driver.findElement(By.id(prop.getProperty("To_id")));
 		field2.click();
-		field2.sendKeys("ban");
+		field2.sendKeys(prop1.getProperty("Destination"));
 		Thread.sleep(2000);
 		field2.sendKeys(Keys.ARROW_DOWN);
 		Thread.sleep(2000);
 		field2.sendKeys(Keys.ENTER);
+		Thread.sleep(2000);
 
 		driver.findElement(By.id(prop.getProperty("Departure_id"))).click();
-		driver.findElement(By.id(prop.getProperty("Date16"))).click();
+		driver.findElement(By.id(prop.getProperty("Date17"))).click();
 
 		driver.findElement(By.id(prop.getProperty("Return_id"))).click();
 		driver.findElement(By.id(prop.getProperty("Date18"))).click();
