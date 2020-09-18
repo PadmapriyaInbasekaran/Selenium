@@ -1,16 +1,12 @@
 package com.atmecs.selenium;
-
 import java.io.FileInputStream;
-//import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-//import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,7 +15,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 public class Goibibo {
 	WebDriver driver;
 	Properties prop ;
@@ -28,11 +23,11 @@ public class Goibibo {
 	public void beforeTest() throws InterruptedException, IOException
 	{
 		System.out.println("TEST EXECUTION BEGINS...");
-		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\atmecs\\selenium\\locators.properties");
+		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\atmecs\\selenium\\GoibiboLocators.properties");
 		prop = new Properties();
 		prop.load(file);
 		
-		FileInputStream file1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\atmecs\\selenium\\data.properties");
+		FileInputStream file1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\atmecs\\selenium\\GoibiboData.properties");
 		prop1 = new Properties();
 		prop1.load(file1);
 	}
@@ -46,18 +41,19 @@ public class Goibibo {
 		driver.manage().window().maximize();
 
 	}
-	@Test(priority=1)
+	@Test(priority=0)
 	public void signup() throws InterruptedException
 	{
-		driver.findElement(By.linkText("Sign up")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.id(prop.getProperty("SignUp_id"))).click();
 		Thread.sleep(5000);
 		driver.switchTo().frame("authiframe");
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//button[@id=\'authFBSignInBtn\']")).click();
+		driver.findElement(By.xpath(prop.getProperty("SignInToFB"))).click();
 		Thread.sleep(2000);
 		String parent=driver.getWindowHandle();
 		Set<String>s=driver.getWindowHandles();
-		// Now iterate using Iterator
+		
 		Iterator<String> I1= s.iterator();
 		while(I1.hasNext())
 		{
@@ -65,18 +61,18 @@ public class Goibibo {
 			if(!parent.equals(child_window))
 			{
 				driver.switchTo().window(child_window);
-				driver.findElement(By.id("email")).sendKeys("xyzz");
-				driver.findElement(By.id("pass")).sendKeys("123");
-				driver.findElement(By.name("login")).click();
+				driver.findElement(By.id(prop.getProperty("FacebookUname"))).sendKeys(prop1.getProperty("FacebookUname"));
+				driver.findElement(By.id(prop.getProperty("FacebookPwd"))).sendKeys(prop1.getProperty("FacebookPwd"));
+				driver.findElement(By.name(prop.getProperty("LoginButton"))).click();
 				Thread.sleep(5000);
-				WebElement text = 	driver.findElement(By.id("error_box"));
+				WebElement text = 	driver.findElement(By.id(prop.getProperty("ErrorMessage")));
 				System.out.println(text.getText());	
 
 			}
 		}
 
 	}
-	@Test (priority=0)
+	@Test (priority=1)
 	public void booking() throws InterruptedException
 	{
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
@@ -99,10 +95,10 @@ public class Goibibo {
 		Thread.sleep(2000);
 
 		driver.findElement(By.id(prop.getProperty("Departure_id"))).click();
-		driver.findElement(By.id(prop.getProperty("Date17"))).click();
+		driver.findElement(By.id(prop.getProperty("Date20"))).click();
 
 		driver.findElement(By.id(prop.getProperty("Return_id"))).click();
-		driver.findElement(By.id(prop.getProperty("Date18"))).click();
+		driver.findElement(By.id(prop.getProperty("Date22"))).click();
 		Thread.sleep(2000);
 		driver.findElement(By.id(prop.getProperty("Travel_id"))).click();
 		Thread.sleep(2000);

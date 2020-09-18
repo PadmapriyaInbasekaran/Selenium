@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [DemoAutomation]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Register(failed)">
+    <classes>
+      <class name="demoautomation.Register">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="register"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- demoautomation.Register -->
+    </classes>
+  </test> <!-- Register(failed) -->
+</suite> <!-- Failed suite [DemoAutomation] -->

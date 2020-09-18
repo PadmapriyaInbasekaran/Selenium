@@ -3,6 +3,46 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="com.atmecs.selenium.WindowHandles">
+        <methods>
+          <include name="twitter"/>
+          <include name="afterTest"/>
+          <include name="beforeClass"/>
+          <include name="youTube"/>
+          <include name="linkedIn"/>
+          <include name="faceBook"/>
+          <include name="beforeTest"/>
+          <include name="googlePlus"/>
+        </methods>
+      </class> <!-- com.atmecs.selenium.WindowHandles -->
+      <class name="com.atmecs.selenium.PhpTravels">
+        <methods>
+          <include name="chatBox"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.atmecs.selenium.PhpTravels -->
+      <class name="com.atmecs.selenium.DemoAutomation">
+        <methods>
+          <include name="register"/>
+          <include name="beforeClass"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.atmecs.selenium.DemoAutomation -->
+      <class name="com.atmecs.selenium.DemoBlaze">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="demoBlazeSignUp"/>
+          <include name="demoBlazeLogIn"/>
+          <include name="demoBlazeAddToCart"/>
+          <include name="demoBlazeVerifyCart"/>
+          <include name="demoBlazeContact"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.atmecs.selenium.DemoBlaze -->
       <class name="com.atmecs.selenium.Goibibo">
         <methods>
           <include name="beforeMethod"/>
@@ -13,6 +53,26 @@
           <include name="afterMethod"/>
         </methods>
       </class> <!-- com.atmecs.selenium.Goibibo -->
+      <class name="com.atmecs.selenium.AmazonLogin">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="amazonTest"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="amazonLogin"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.atmecs.selenium.AmazonLogin -->
+      <class name="com.atmecs.selenium.RedBus">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="booking"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.atmecs.selenium.RedBus -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

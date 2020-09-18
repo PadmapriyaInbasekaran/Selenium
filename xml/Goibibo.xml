@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Goibibo">
+  <test name="SignUp">
+  <classes>
+  <class name = 'goibibo.SignUp'/>
+   </classes>
+  </test> <!-- Test -->
+  <test name = "Booking">
+   <classes>
+    <class name = 'goibibo.Booking'/>
+    </classes>
+  </test>
+  </suite> <!-- Suite -->

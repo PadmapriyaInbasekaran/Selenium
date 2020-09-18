@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DemoAutomation">
+  <test name="Register">
+  <classes>
+  <class name = 'demoautomation.Register'/>
+   </classes>
+  </test> <!-- Test -->
+  <test name = "FaceBook">
+   <classes>
+    <class name = 'demoautomation.FaceBook'/>
+    </classes>
+  </test>
+  <test name = "LinkedIn">
+   <classes>
+    <class name = 'demoautomation.LinkedIn'/>
+    </classes>
+  </test>
+  <test name = "GooglePlus">
+   <classes>
+    <class name = 'demoautomation.GooglePlus'/>
+    </classes>
+  </test>
+  <test name = "Twitter">
+   <classes>
+    <class name = 'demoautomation.Twitter'/>
+    </classes>
+  </test>
+  <test name = "YouTube">
+   <classes>
+    <class name = 'demoautomation.YouTube'/>
+    </classes>
+  </test>
+  </suite>
