@@ -1,6 +1,9 @@
 package demoautomation;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Iterator;
+import java.util.Properties;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -13,10 +16,15 @@ import org.testng.annotations.Test;
 
 public class YouTube {
 	WebDriver driver;
+	FileInputStream file;
+	Properties prop;
 	@BeforeTest
-	public void beforeTest() throws InterruptedException
+	public void beforeTest() throws InterruptedException, IOException
 	{
 		System.out.println("TEST EXECUTION BEGINS...");
+		file = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\atmecs\\selenium\\RegisterLocators.properties");
+		prop = new Properties();
+		prop.load(file);
 		String chromeDriverPath = System.setProperty("user.dir",  "\\chromedriver.exe");
 		System.out.println(chromeDriverPath);
 		driver=new ChromeDriver();
@@ -34,7 +42,7 @@ public class YouTube {
 	@Test
 	public void youTube()
 	{
-		driver.findElement(By.xpath("//*[@id=\'footer\']/div/div/div[2]/a[5]")).click();
+		driver.findElement(By.xpath(prop.getProperty("YouTubeIcon"))).click();
 		String parent=driver.getWindowHandle();
 
 		Set<String>s=driver.getWindowHandles();
