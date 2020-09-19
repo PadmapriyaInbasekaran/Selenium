@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="6" passed="1" failed="0" skipped="5">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-09-19T05:50:58Z" name="DemoAutomation" finished-at="2020-09-19T05:52:18Z" duration-ms="80023">
+  <suite started-at="2020-09-19T06:25:58Z" name="DemoAutomation" finished-at="2020-09-19T06:27:17Z" duration-ms="78202">
     <groups>
     </groups>
-    <test started-at="2020-09-19T05:50:58Z" name="Register" finished-at="2020-09-19T05:52:18Z" duration-ms="79789">
+    <test started-at="2020-09-19T06:25:58Z" name="Register" finished-at="2020-09-19T06:27:16Z" duration-ms="78029">
       <class name="demoautomation.Register">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:demoautomation.Register@3c153a1]" started-at="2020-09-19T05:50:58Z" name="beforeTest" finished-at="2020-09-19T05:50:58Z" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:demoautomation.Register@3c153a1]" started-at="2020-09-19T06:25:58Z" name="beforeTest" finished-at="2020-09-19T06:25:58Z" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:demoautomation.Register@3c153a1]" started-at="2020-09-19T05:50:58Z" name="beforeClass" finished-at="2020-09-19T05:51:10Z" duration-ms="11695" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:demoautomation.Register@3c153a1]" started-at="2020-09-19T06:25:58Z" name="beforeClass" finished-at="2020-09-19T06:26:09Z" duration-ms="10230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="register()[pri:0, instance:demoautomation.Register@3c153a1]" started-at="2020-09-19T05:51:10Z" name="register" finished-at="2020-09-19T05:52:16Z" duration-ms="66900" status="PASS">
+        <test-method signature="register()[pri:0, instance:demoautomation.Register@3c153a1]" started-at="2020-09-19T06:26:09Z" name="register" finished-at="2020-09-19T06:27:15Z" duration-ms="66611" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- register -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:demoautomation.Register@3c153a1]" started-at="2020-09-19T05:52:16Z" name="afterTest" finished-at="2020-09-19T05:52:18Z" duration-ms="1147" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:demoautomation.Register@3c153a1]" started-at="2020-09-19T06:27:15Z" name="afterTest" finished-at="2020-09-19T06:27:16Z" duration-ms="1132" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- demoautomation.Register -->
     </test> <!-- Register -->
-    <test started-at="2020-09-19T05:52:18Z" name="FaceBook" finished-at="2020-09-19T05:52:18Z" duration-ms="19">
+    <test started-at="2020-09-19T06:27:16Z" name="FaceBook" finished-at="2020-09-19T06:27:16Z" duration-ms="19">
       <class name="demoautomation.FaceBook">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:demoautomation.FaceBook@79ad8b2f]" started-at="2020-09-19T05:52:18Z" name="beforeTest" finished-at="2020-09-19T05:52:18Z" duration-ms="1" status="FAIL">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:demoautomation.FaceBook@79ad8b2f]" started-at="2020-09-19T06:27:16Z" name="beforeTest" finished-at="2020-09-19T06:27:16Z" duration-ms="1" status="FAIL">
           <exception class="java.io.FileNotFoundException">
             <message>
               <![CDATA[\chromedriver.exe\src\test\java\com\atmecs\selenium\RegisterLocators.properties (The system cannot find the path specified)]]>
@@ -69,11 +69,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:demoautomation.FaceBook@79ad8b2f]" started-at="2020-09-19T05:52:18Z" name="beforeClass" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:demoautomation.FaceBook@79ad8b2f]" started-at="2020-09-19T06:27:16Z" name="beforeClass" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="faceBook()[pri:0, instance:demoautomation.FaceBook@79ad8b2f]" started-at="2020-09-19T05:52:18Z" name="faceBook" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method signature="faceBook()[pri:0, instance:demoautomation.FaceBook@79ad8b2f]" started-at="2020-09-19T06:27:16Z" name="faceBook" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="SKIP">
           <exception class="java.io.FileNotFoundException">
             <message>
               <![CDATA[\chromedriver.exe\src\test\java\com\atmecs\selenium\RegisterLocators.properties (The system cannot find the path specified)]]>
@@ -115,15 +115,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- faceBook -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:demoautomation.FaceBook@79ad8b2f]" started-at="2020-09-19T05:52:18Z" name="afterTest" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:demoautomation.FaceBook@79ad8b2f]" started-at="2020-09-19T06:27:16Z" name="afterTest" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- demoautomation.FaceBook -->
     </test> <!-- FaceBook -->
-    <test started-at="2020-09-19T05:52:18Z" name="LinkedIn" finished-at="2020-09-19T05:52:18Z" duration-ms="16">
+    <test started-at="2020-09-19T06:27:16Z" name="LinkedIn" finished-at="2020-09-19T06:27:16Z" duration-ms="11">
       <class name="demoautomation.LinkedIn">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:demoautomation.LinkedIn@f8c1ddd]" started-at="2020-09-19T05:52:18Z" name="beforeTest" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="FAIL">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:demoautomation.LinkedIn@f8c1ddd]" started-at="2020-09-19T06:27:16Z" name="beforeTest" finished-at="2020-09-19T06:27:16Z" duration-ms="1" status="FAIL">
           <exception class="java.io.FileNotFoundException">
             <message>
               <![CDATA[\chromedriver.exe\src\test\java\com\atmecs\selenium\RegisterLocators.properties (The system cannot find the path specified)]]>
@@ -165,11 +165,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:demoautomation.LinkedIn@f8c1ddd]" started-at="2020-09-19T05:52:18Z" name="beforeClass" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:demoautomation.LinkedIn@f8c1ddd]" started-at="2020-09-19T06:27:16Z" name="beforeClass" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="linkedIn()[pri:0, instance:demoautomation.LinkedIn@f8c1ddd]" started-at="2020-09-19T05:52:18Z" name="linkedIn" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method signature="linkedIn()[pri:0, instance:demoautomation.LinkedIn@f8c1ddd]" started-at="2020-09-19T06:27:16Z" name="linkedIn" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="SKIP">
           <exception class="java.io.FileNotFoundException">
             <message>
               <![CDATA[\chromedriver.exe\src\test\java\com\atmecs\selenium\RegisterLocators.properties (The system cannot find the path specified)]]>
@@ -211,15 +211,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- linkedIn -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:demoautomation.LinkedIn@f8c1ddd]" started-at="2020-09-19T05:52:18Z" name="afterTest" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:demoautomation.LinkedIn@f8c1ddd]" started-at="2020-09-19T06:27:16Z" name="afterTest" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- demoautomation.LinkedIn -->
     </test> <!-- LinkedIn -->
-    <test started-at="2020-09-19T05:52:18Z" name="GooglePlus" finished-at="2020-09-19T05:52:18Z" duration-ms="10">
+    <test started-at="2020-09-19T06:27:16Z" name="GooglePlus" finished-at="2020-09-19T06:27:16Z" duration-ms="12">
       <class name="demoautomation.GooglePlus">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:demoautomation.GooglePlus@60704c]" started-at="2020-09-19T05:52:18Z" name="beforeTest" finished-at="2020-09-19T05:52:18Z" duration-ms="1" status="FAIL">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:demoautomation.GooglePlus@60704c]" started-at="2020-09-19T06:27:16Z" name="beforeTest" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="FAIL">
           <exception class="java.io.FileNotFoundException">
             <message>
               <![CDATA[\chromedriver.exe\src\test\java\com\atmecs\selenium\RegisterLocators.properties (The system cannot find the path specified)]]>
@@ -261,11 +261,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:demoautomation.GooglePlus@60704c]" started-at="2020-09-19T05:52:18Z" name="beforeClass" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:demoautomation.GooglePlus@60704c]" started-at="2020-09-19T06:27:16Z" name="beforeClass" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="googlePlus()[pri:0, instance:demoautomation.GooglePlus@60704c]" started-at="2020-09-19T05:52:18Z" name="googlePlus" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method signature="googlePlus()[pri:0, instance:demoautomation.GooglePlus@60704c]" started-at="2020-09-19T06:27:16Z" name="googlePlus" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="SKIP">
           <exception class="java.io.FileNotFoundException">
             <message>
               <![CDATA[\chromedriver.exe\src\test\java\com\atmecs\selenium\RegisterLocators.properties (The system cannot find the path specified)]]>
@@ -307,15 +307,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- googlePlus -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:demoautomation.GooglePlus@60704c]" started-at="2020-09-19T05:52:18Z" name="afterTest" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:demoautomation.GooglePlus@60704c]" started-at="2020-09-19T06:27:16Z" name="afterTest" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- demoautomation.GooglePlus -->
     </test> <!-- GooglePlus -->
-    <test started-at="2020-09-19T05:52:18Z" name="Twitter" finished-at="2020-09-19T05:52:18Z" duration-ms="10">
+    <test started-at="2020-09-19T06:27:16Z" name="Twitter" finished-at="2020-09-19T06:27:16Z" duration-ms="11">
       <class name="demoautomation.Twitter">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:demoautomation.Twitter@2805c96b]" started-at="2020-09-19T05:52:18Z" name="beforeTest" finished-at="2020-09-19T05:52:18Z" duration-ms="1" status="FAIL">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:demoautomation.Twitter@2805c96b]" started-at="2020-09-19T06:27:16Z" name="beforeTest" finished-at="2020-09-19T06:27:16Z" duration-ms="1" status="FAIL">
           <exception class="java.io.FileNotFoundException">
             <message>
               <![CDATA[\chromedriver.exe\src\test\java\com\atmecs\selenium\RegisterLocators.properties (The system cannot find the path specified)]]>
@@ -357,11 +357,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:demoautomation.Twitter@2805c96b]" started-at="2020-09-19T05:52:18Z" name="beforeClass" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:demoautomation.Twitter@2805c96b]" started-at="2020-09-19T06:27:16Z" name="beforeClass" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="twitter()[pri:0, instance:demoautomation.Twitter@2805c96b]" started-at="2020-09-19T05:52:18Z" name="twitter" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method signature="twitter()[pri:0, instance:demoautomation.Twitter@2805c96b]" started-at="2020-09-19T06:27:16Z" name="twitter" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="SKIP">
           <exception class="java.io.FileNotFoundException">
             <message>
               <![CDATA[\chromedriver.exe\src\test\java\com\atmecs\selenium\RegisterLocators.properties (The system cannot find the path specified)]]>
@@ -403,15 +403,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- twitter -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:demoautomation.Twitter@2805c96b]" started-at="2020-09-19T05:52:18Z" name="afterTest" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:demoautomation.Twitter@2805c96b]" started-at="2020-09-19T06:27:16Z" name="afterTest" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- demoautomation.Twitter -->
     </test> <!-- Twitter -->
-    <test started-at="2020-09-19T05:52:18Z" name="YouTube" finished-at="2020-09-19T05:52:18Z" duration-ms="10">
+    <test started-at="2020-09-19T06:27:16Z" name="YouTube" finished-at="2020-09-19T06:27:17Z" duration-ms="10">
       <class name="demoautomation.YouTube">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:demoautomation.YouTube@233fe9b6]" started-at="2020-09-19T05:52:18Z" name="beforeTest" finished-at="2020-09-19T05:52:18Z" duration-ms="1" status="FAIL">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:demoautomation.YouTube@233fe9b6]" started-at="2020-09-19T06:27:16Z" name="beforeTest" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="FAIL">
           <exception class="java.io.FileNotFoundException">
             <message>
               <![CDATA[\chromedriver.exe\src\test\java\com\atmecs\selenium\RegisterLocators.properties (The system cannot find the path specified)]]>
@@ -453,11 +453,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:demoautomation.YouTube@233fe9b6]" started-at="2020-09-19T05:52:18Z" name="beforeClass" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:demoautomation.YouTube@233fe9b6]" started-at="2020-09-19T06:27:16Z" name="beforeClass" finished-at="2020-09-19T06:27:16Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="youTube()[pri:0, instance:demoautomation.YouTube@233fe9b6]" started-at="2020-09-19T05:52:18Z" name="youTube" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method signature="youTube()[pri:0, instance:demoautomation.YouTube@233fe9b6]" started-at="2020-09-19T06:27:17Z" name="youTube" finished-at="2020-09-19T06:27:17Z" duration-ms="0" status="SKIP">
           <exception class="java.io.FileNotFoundException">
             <message>
               <![CDATA[\chromedriver.exe\src\test\java\com\atmecs\selenium\RegisterLocators.properties (The system cannot find the path specified)]]>
@@ -499,7 +499,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- youTube -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:demoautomation.YouTube@233fe9b6]" started-at="2020-09-19T05:52:18Z" name="afterTest" finished-at="2020-09-19T05:52:18Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:demoautomation.YouTube@233fe9b6]" started-at="2020-09-19T06:27:17Z" name="afterTest" finished-at="2020-09-19T06:27:17Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

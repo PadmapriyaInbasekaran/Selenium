@@ -19,6 +19,8 @@ public class Register {
 	WebElement txt;
 	FileInputStream file;
 	Properties prop;
+	FileInputStream file1;
+	Properties prop1;
 	@BeforeTest
 	public void beforeTest() throws InterruptedException, IOException
 	{
@@ -26,6 +28,9 @@ public class Register {
 		file = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\atmecs\\selenium\\RegisterLocators.properties");
 		prop = new Properties();
 		prop.load(file);
+		file1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\atmecs\\selenium\\RegisterData.properties");
+		prop1 = new Properties();
+		prop1.load(file1);
 	}
 	@BeforeClass
 	public void beforeClass() throws InterruptedException
@@ -43,12 +48,12 @@ public class Register {
 	public void register() throws InterruptedException
 	{
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
-		driver.findElement(By.xpath(prop.getProperty("FirstName"))).sendKeys("Padmapriya"); //firstName
-		driver.findElement(By.xpath(prop.getProperty("LastName"))).sendKeys("Inbasekaran"); //lastName
-		driver.findElement(By.xpath(prop.getProperty("Address"))).sendKeys("Chennai,Tamilnadu");  //address
-		driver.findElement(By.xpath(prop.getProperty("EmailAdress"))).sendKeys("abcd@gmail.com"); //email
+		driver.findElement(By.xpath(prop.getProperty("FirstName"))).sendKeys(prop1.getProperty("FirstName")); //firstName
+		driver.findElement(By.xpath(prop.getProperty("LastName"))).sendKeys(prop1.getProperty("LastName")); //lastName
+		driver.findElement(By.xpath(prop.getProperty("Address"))).sendKeys(prop1.getProperty("Address"));  //address
+		driver.findElement(By.xpath(prop.getProperty("EmailAdress"))).sendKeys(prop1.getProperty("EmailAdress")); //email
 
-		driver.findElement(By.xpath(prop.getProperty("PhoneNo"))).sendKeys("9234567747");  //mobileNo
+		driver.findElement(By.xpath(prop.getProperty("PhoneNo"))).sendKeys(prop1.getProperty("PhoneNo"));  //mobileNo
 		driver.findElement(By.xpath(prop.getProperty("Gender"))).click();  //gender
 		driver.findElement(By.xpath(prop.getProperty("Hobby"))).click();  //hobby
 		Thread.sleep(2000);
@@ -111,12 +116,12 @@ public class Register {
 
 		WebElement element6 =	driver.findElement(By.xpath(prop.getProperty("Pwd")));
 		element6.click();
-		element6.sendKeys("Welcome@123");
+		element6.sendKeys(prop1.getProperty("Pwd"));
 		Thread.sleep(10000);
 
 		WebElement element7 =	driver.findElement(By.xpath(prop.getProperty("ConfirmPwd")));
 		element7.click();
-		element7.sendKeys("Welcome@123");
+		element7.sendKeys(prop1.getProperty("ConfirmPwd"));
 		driver.findElement(By.id("submitbtn")).click();
 		Thread.sleep(10000);
 
