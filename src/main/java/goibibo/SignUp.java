@@ -25,6 +25,11 @@ public class SignUp {
 	public void beforeTest() throws InterruptedException, IOException
 	{
 		System.out.println("TEST EXECUTION BEGINS...");
+		
+	}
+	@BeforeMethod
+	public void beforeMethod() throws InterruptedException, IOException
+	{
 		file = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\atmecs\\selenium\\GoibiboLocators.properties");
 		prop = new Properties();
 		prop.load(file);
@@ -32,10 +37,6 @@ public class SignUp {
 		file1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\atmecs\\selenium\\GoibiboData.properties");
 		prop1 = new Properties();
 		prop1.load(file1);
-	}
-	@BeforeMethod
-	public void beforeMethod() throws InterruptedException
-	{
 		String chromeDriverPath = System.setProperty("user.dir",  "\\chromedriver.exe");
 		System.out.println(chromeDriverPath);
 		driver=new ChromeDriver();

@@ -1,12 +1,10 @@
 package goibibo;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 //import java.util.Iterator;
 import java.util.Properties;
 //import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +15,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 public class Booking {
 	WebDriver driver;
 	Properties prop ;
@@ -28,6 +25,16 @@ public class Booking {
 	public void beforeTest() throws InterruptedException, IOException
 	{
 		System.out.println("TEST EXECUTION BEGINS...");
+		
+	}
+	@BeforeMethod
+	public void beforeMethod() throws InterruptedException, IOException
+	{
+		String chromeDriverPath = System.setProperty("user.dir",  "\\chromedriver.exe");
+		System.out.println(chromeDriverPath);
+		driver=new ChromeDriver();
+		driver.navigate().to("https://www.goibibo.com/flights/");   
+		driver.manage().window().maximize();
 		file = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\atmecs\\selenium\\GoibiboLocators.properties");
 		prop = new Properties();
 		prop.load(file);
@@ -35,19 +42,8 @@ public class Booking {
 		file1 = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\com\\atmecs\\selenium\\GoibiboData.properties");
 		prop1 = new Properties();
 		prop1.load(file1);
-		file1.close();
+		
 	}
-	@BeforeMethod
-	public void beforeMethod() throws InterruptedException
-	{
-		String chromeDriverPath = System.setProperty("user.dir",  "\\chromedriver.exe");
-		System.out.println(chromeDriverPath);
-		driver=new ChromeDriver();
-		driver.navigate().to("https://www.goibibo.com/flights/");   
-		driver.manage().window().maximize();
-
-	}
-
 	@Test 
 	public void booking() throws InterruptedException
 	{

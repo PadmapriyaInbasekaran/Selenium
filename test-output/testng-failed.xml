@@ -1,64 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [DemoAutomation]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="FaceBook(failed)">
+<suite name="Failed suite [Goibibo]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Booking(failed)">
     <classes>
-      <class name="demoautomation.FaceBook">
+      <class name="goibibo.Booking">
         <methods>
-          <include name="afterTest"/>
+          <include name="booking"/>
+          <include name="beforeMethod"/>
           <include name="beforeTest"/>
-          <include name="faceBook"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- demoautomation.FaceBook -->
-    </classes>
-  </test> <!-- FaceBook(failed) -->
-  <test thread-count="5" name="LinkedIn(failed)">
-    <classes>
-      <class name="demoautomation.LinkedIn">
-        <methods>
-          <include name="beforeClass"/>
+          <include name="afterMethod"/>
           <include name="afterTest"/>
-          <include name="beforeTest"/>
-          <include name="linkedIn"/>
         </methods>
-      </class> <!-- demoautomation.LinkedIn -->
+      </class> <!-- goibibo.Booking -->
     </classes>
-  </test> <!-- LinkedIn(failed) -->
-  <test thread-count="5" name="GooglePlus(failed)">
-    <classes>
-      <class name="demoautomation.GooglePlus">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="afterTest"/>
-          <include name="googlePlus"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- demoautomation.GooglePlus -->
-    </classes>
-  </test> <!-- GooglePlus(failed) -->
-  <test thread-count="5" name="Twitter(failed)">
-    <classes>
-      <class name="demoautomation.Twitter">
-        <methods>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeClass"/>
-          <include name="twitter"/>
-        </methods>
-      </class> <!-- demoautomation.Twitter -->
-    </classes>
-  </test> <!-- Twitter(failed) -->
-  <test thread-count="5" name="YouTube(failed)">
-    <classes>
-      <class name="demoautomation.YouTube">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="afterTest"/>
-          <include name="beforeClass"/>
-          <include name="youTube"/>
-        </methods>
-      </class> <!-- demoautomation.YouTube -->
-    </classes>
-  </test> <!-- YouTube(failed) -->
-</suite> <!-- Failed suite [DemoAutomation] -->
+  </test> <!-- Booking(failed) -->
+</suite> <!-- Failed suite [Goibibo] -->
